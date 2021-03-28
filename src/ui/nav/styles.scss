@@ -1,0 +1,72 @@
+
+  
+  $primary-transition: all 0.5s;
+  
+  $link-color-primary: #a1a1a1;
+  $link-color-selected: #010101;
+  $link-color-hovered: #549de1;
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav {
+    border-bottom: 1px solid #d8d8d8;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    max-width: calc(960px - 48px);
+    padding: 0 24px;
+
+    &-item {
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      line-height: 31px;
+      margin: 0 6px;
+      color: $link-color-primary;
+      transition: $primary-transition;
+      white-space: nowrap;
+      position: relative;
+      cursor: pointer;
+     
+      &:hover {
+        color: $link-color-hovered;
+      }
+  
+      &[data-selected="true"] {
+        color: $link-color-selected;
+
+        .nav-timer {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  
+    &-pointer {
+      position: absolute;
+      background-color: #0c0c0c;
+      left: 0;
+      height: 1px;
+      bottom: -1px;
+      transition: $primary-transition;
+    } 
+
+    &-timer {
+      transform: translateY(-18px);
+      opacity: 0;
+      font-size: 0.7rem;
+      position: absolute;
+      display: block;  
+      text-align: center;
+      transition: $primary-transition;
+      color: $link-color-primary;
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+  
+   

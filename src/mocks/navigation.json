@@ -1,0 +1,39 @@
+{
+  "cities": [
+    {
+      "section": "cupertino",
+      "label": "Cupertino",
+      "timezoneOffset": -420
+    },
+    {
+      "section": "new-york-city",
+      "label": "New York City",
+      "timezoneOffset": -240
+    },
+    {
+      "section": "london",
+      "label": "London",
+      "timezoneOffset": 180
+    },
+    {
+      "section": "amsterdam",
+      "label": "Amsterdam",
+      "timezoneOffset": 60
+    },
+    {
+      "section": "tokyo",
+      "label": "Tokyo",
+      "timezoneOffset": 540
+    },
+    {
+      "section": "hong-kong",
+      "label": "Hong Kong",
+      "timezoneOffset": 540
+    },
+    {
+      "section": "sydney",
+      "label": "Sydney",
+      "timezoneOffset": 660
+    }
+  ]
+}

@@ -10,7 +10,7 @@ export const Navigation = ({ items = [] }) => {
   return (
     <div className="nav">
       {items.map(({ label, section, timezoneOffset }, key) => {
-        const isSelected = section === activeNode?.target.dataset?.section;
+        const isSelected = section === activeEvent?.target.dataset?.section;
 
         return (
           <div

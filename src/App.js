@@ -1,14 +1,14 @@
 import './App.scss';
 
-import { cities } from "./mocks/navigation.json";
-import { Navigation } from "./ui/nav";
+import { cities } from './mocks/navigation.json';
+import { Navigation } from './ui/nav';
 
-const App = () =>{
+const App = () => {
   return (
     <div className="app">
       <Navigation items={cities} />
-     </div>
+    </div>
   );
-}
+};
 
-export default App
+export default App;

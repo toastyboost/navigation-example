@@ -1,20 +1,19 @@
-import * as React from "react";
+import * as React from 'react';
 
 const now = new Date();
 
 export const Timer = ({ offset }) => {
   const [date, setDate] = React.useState(formatDate(now, offset));
-    
+
   React.useEffect(() => {
     const timer = setInterval(() => setDate(formatDate(now, offset)), 1000);
     return () => clearInterval(timer);
   });
 
-  return date
-}
+  return date;
+};
 
 function formatDate(date, offset) {
-
   function withZero(num) {
     return num > 9 ? num : `0${num}`;
   }
@@ -24,9 +23,5 @@ function formatDate(date, offset) {
   const hours = withZero(d.getHours());
   const minutes = withZero(d.getMinutes());
 
-  return `${hours}:${minutes}`
+  return `${hours}:${minutes}`;
 }
- 
- 
- 
- 

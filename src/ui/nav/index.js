@@ -8,27 +8,29 @@ export const Navigation = ({ items = [] }) => {
   const pointerStyles = usePointerStyles(activeEvent);
 
   return (
-    <div className="nav">
-      {items.map(({ label, section, timezoneOffset }, key) => {
-        const isSelected = section === activeEvent?.target.dataset?.section;
+    <nav className="nav">
+      <ul className="nav-list">
+        {items.map(({ label, section, timezoneOffset }, key) => {
+          const isSelected = section === activeEvent?.target.dataset?.section;
 
-        return (
-          <div
-            key={key}
-            className="nav-item"
-            onClick={setActiveEvent}
-            data-section={section}
-            data-selected={isSelected}
-          >
-            {label}
-            <div className="nav-timer">
-              {isSelected && <Timer offset={timezoneOffset} />}
-            </div>
-          </div>
-        );
-      })}
+          return (
+            <li
+              key={key}
+              className="nav-item"
+              onClick={setActiveEvent}
+              data-section={section}
+              data-selected={isSelected}
+            >
+              {label}
+              <div className="nav-timer">
+                {isSelected && <Timer offset={timezoneOffset} />}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
       <div className="nav-pointer" style={pointerStyles} />
-    </div>
+    </nav>
   );
 };
 

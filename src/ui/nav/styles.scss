@@ -5,14 +5,19 @@ $link-color-selected: #010101;
 $link-color-hovered: #549de1;
 
 .nav {
-  border-bottom: 1px solid #d8d8d8;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
   width: 100%;
   max-width: calc(960px - 48px);
   padding: 0 24px;
+
+  &-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style-type: none;
+    min-width: 490px;
+    border-bottom: 1px solid #d8d8d8;
+  }
 
   &-item {
     font-size: 0.75rem;
@@ -38,12 +43,12 @@ $link-color-hovered: #549de1;
       }
     }
 
-    &:first-child {
-      margin-left: 6px;
+    &:first-of-type {
+      margin-left: 0;
     }
 
-    &:last-child {
-      margin-right: 6px;
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 

@@ -56,8 +56,8 @@ $link-color-hovered: #549de1;
     position: absolute;
     background-color: #0c0c0c;
     left: 0;
+    bottom: 0;
     height: 1px;
-    bottom: -1px;
     transition: $primary-transition;
   }
 

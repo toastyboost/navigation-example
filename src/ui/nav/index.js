@@ -4,8 +4,8 @@ import './styles.scss';
 import { Timer } from '../timer';
 
 export const Navigation = ({ items = [] }) => {
-  const [activeNode, setActiveNode] = React.useState(null);
-  const pointerStyles = usePointerStyles(activeNode);
+  const [activeEvent, setActiveEvent] = React.useState(null);
+  const pointerStyles = usePointerStyles(activeEvent);
 
   return (
     <div className="nav">
@@ -16,7 +16,7 @@ export const Navigation = ({ items = [] }) => {
           <div
             key={key}
             className="nav-item"
-            onClick={setActiveNode}
+            onClick={setActiveEvent}
             data-section={section}
             data-selected={isSelected}
           >
